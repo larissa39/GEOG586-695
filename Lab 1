@@ -3,14 +3,7 @@
 <head>
 
 	<style>
-	/* size of primary map */
-		#primaryMap {
-			height: 550px;
-			width: 950px;
-			margin: auto;
-			}
-		
-		/* header and paragraph settings */
+		/* style settings */
 		h1 {
 			font-family: arial;
 			color: FireBrick;
@@ -37,7 +30,9 @@
 			
 		body {
 			background-color: FloralWhite;
-			}	
+			}
+		
+		#mapid { height: 180px; }
 	</style>
 	
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
