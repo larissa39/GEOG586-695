@@ -66,7 +66,7 @@
 		
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
+	}).addTo(mymap);
 			
 	L.marker([35.66036651018742, 139.69940115950655]).addTo(mymap);
 		.bindPopup("Genki Sushi - a cheap and good conveyor belt sushi resturant.")
