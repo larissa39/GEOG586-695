@@ -54,8 +54,9 @@
 
 
 	<div id="mapid"></div>
-
-	var mymap = L.map('mapid').setView([35.68452106000071, 139.75554726521702], 13);
+	
+	<script type= "application/javascript">
+		var mymap = L.map('mapid').setView([35.68452106000071, 139.75554726521702], 13);
 			
 		
 			L.marker([35.66036651018742, 139.69940115950655]).addTo(mymap);
