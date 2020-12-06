@@ -6,7 +6,6 @@
 		h1 {
 			font-family: arial;
 			color: FireBrick;
-			background: LavenderBlush;
 			text-align: center;
 			}
 				
@@ -47,8 +46,8 @@
 
 	<h1>My Birthday Trip 2018 - Tokyo with my Mom and Sister</h1>
 	<h2>GEOG 586/695 Lab 1</h2>
-	<h3>By Larissa Shevchenko 10127268</h3>
-	<p style="cplor:red;">test test test test test test</p>
+	<h3>Larissa Shevchenko 10127268</h3>
+	<p style="cplor:red;">In July of 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of touristy things, and had a blast!</p>
 
 
 	<div id="primaryMap"></div>
