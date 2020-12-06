@@ -34,6 +34,13 @@
 		body {
 			background-color: FloralWhite;
 			}
+        
+         .center {
+         margin: auto;
+         width: 60%;
+         border: 5px solid; color: FireBrick;
+         padding: 10px;
+         }
 		
 	</style>
 	
@@ -62,7 +69,7 @@
 <div id="mapid" class="center"></div>
 	
 <script type= "application/javascript">
-	var mymap = L.map('mapid').setView([35.68452106000071, 139.75554726521702], 13);
+	var mymap = L.map('mapid').setView([35.68452106000071, 139.75554726521702], 10);
 		
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
