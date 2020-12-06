@@ -21,15 +21,15 @@
 				
 		h3 {
 			color: purple;
-			text-align: right;
+			text-align: center;
 			}
 				
 		p {
-			font-family: times new roman;
+			font-family: arial;
 			}
 			
 		body {
-			background-color: lightgrey;
+			background-color: FloralWhite;
 			}
 			
 	</style>
@@ -47,9 +47,9 @@
 <body>
 
 	<h1>GEOG 586/695 Lab 1</h1>
-	<h2>My Birthday Trip 2018 - Tokyo with Mom and Sister</h2>
+	<h2>My Birthday Trip 2018 - Tokyo with my Mom and Sister</h2>
 	<h3>By Larissa Shevchenko 10127268</h3>
-	<p>test test test test test test</p>
+	<p style="cplor:red;">test test test test test test</p>
 
 
 		<div id="primaryMap"></div>
