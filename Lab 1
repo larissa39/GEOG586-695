@@ -12,17 +12,20 @@
 		
 		/* header and paragraph settings */
 		h1 {
-			color: red;
+			font-family: arial;
+			color: FireBrick;
 			text-align: center;
 			}
 				
 		h2 {
-			color: indigo;
+			font-family: arial;
+			color: IndianRed;
 			text-align: center;
 			}
 				
 		h3 {
-			color: purple;
+			font-family: arial;
+			color: MediumOrchid;
 			text-align: center;
 			}
 				
@@ -37,7 +40,6 @@
 			
 	</style>
 	
-	/* link to map script */
 
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
 		  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
