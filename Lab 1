@@ -62,7 +62,7 @@
 
 	<h1>Tokyo Trip with my Mom and Sister</h1>
 	<h2>GEOG 586/695 Lab 1</h2>
-	<h3>Larissa Shevchenko 10127268</h3>
+	<h3>Larissa Shevchenko</h3>
 	<p style="cplor:red;">In July 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of fun things, and overall had a blast! Below, linked on the map, are some places we visited on the trip:</p>
 
 
@@ -92,15 +92,35 @@
 		.openPopup();
 				
 	L.marker([35.66377824212148, 139.86149918469388]).addTo(mymap)
-		.bindPopup("Mos Burger - a tasty Japanese burger chain")
+		.bindPopup("Mos Burger - a tasty Japanese burger chain.")
 		.openPopup();
 				
 	L.marker([35.62465762208486, 139.42953915767993]).addTo(mymap)
-		.bindPopup("Sanrio Puroland - a Sanrio theme park. Everything is ~so kawaii~")
+		.bindPopup("Sanrio Puroland - a Sanrio theme park. Everything is ~so kawaii~.")
 		.openPopup();
 			
 	L.marker([35.671440953956015, 139.704023548999]).addTo(mymap)
-		.bindPopup("Beard Papa Harajuku - a creme puff shop in Harajuku, good snack for after lots of shopping")
+		.bindPopup("Beard Papa Harajuku - a creme puff shop in Harajuku, good snack for after lots of shopping.")
+		.openPopup();
+    
+    L.marker([35.709990035416496, 139.81073641017545]).addTo(mymap)
+		.bindPopup("Tokyo Skytree - a radio broadcast tower with a shopping mall underneath.")
+		.openPopup();
+        
+    L.marker([35.714758562738545, 139.796806493158]).addTo(mymap)
+		.bindPopup("Senso Temple - a very aesthetically pleasing Buddhist temple.")
+		.openPopup();
+        
+    L.marker([35.669586360396146, 139.76401155307568]).addTo(mymap)
+		.bindPopup("Ginza Six - a high-end shopping mall with a delicious world-famous green tea ice cream stall and nice rooftop garden to stare at the city lights from.")
+		.openPopup();
+        
+    L.marker([35.77357778215192, 140.38743840470647]).addTo(mymap)
+		.bindPopup("Narita Airport - The airport we flew in and out of.")
+		.openPopup();
+    
+    L.marker([35.71254424544651, 139.7905458223567]).addTo(mymap)
+		.bindPopup("Men Mitsui - A really good bib gourmand ramen place.")
 		.openPopup();
 					
 </script>	
