@@ -68,31 +68,31 @@
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(mymap);
 			
-	L.marker([35.66036651018742, 139.69940115950655]).addTo(mymap);
+	L.marker([35.66036651018742, 139.69940115950655]).addTo(mymap)
 		.bindPopup("Genki Sushi - a cheap and good conveyor belt sushi resturant.")
 		.openPopup();
 				
-	L.marker([35.66121543467788, 139.69821374382948]).addTo(mymap);
+	L.marker([35.66121543467788, 139.69821374382948]).addTo(mymap)
 		.bindPopup("Adores Shibuya - video acrade with fun photobooths for pictures.")
 		.openPopup();
 		
-	L.marker([35.66105455076822, 139.6973820170712]).addTo(mymap);
+	L.marker([35.66105455076822, 139.6973820170712]).addTo(mymap)
 		.bindPopup("Cat Cafe Mocha - cat cafe for furry snuggles.")
 		.openPopup();
 				
-	L.marker([35.66239697807741, 139.86133579435545]).addTo(mymap);
+	L.marker([35.66239697807741, 139.86133579435545]).addTo(mymap)
 		.bindPopup("Hotel Lumiere - a cute hotel with three beds (which was hard to find!) for my mom, sister, and I.")
 		.openPopup();
 				
-	L.marker([35.66377824212148, 139.86149918469388]).addTo(mymap);
+	L.marker([35.66377824212148, 139.86149918469388]).addTo(mymap)
 		.bindPopup("Mos Burger - a tasty Japanese burger chain")
 		.openPopup();
 				
-	L.marker([35.62465762208486, 139.42953915767993]).addTo(mymap);
+	L.marker([35.62465762208486, 139.42953915767993]).addTo(mymap)
 		.bindPopup("Sanrio Puroland - a Sanrio theme park. Everything is ~so kawaii~")
 		.openPopup();
 			
-	L.marker([35.671440953956015, 139.704023548999]).addTo(mymap);
+	L.marker([35.671440953956015, 139.704023548999]).addTo(mymap)
 		.bindPopup("Beard Papa Harajuku - a creme puff shop in Harajuku, good snack for after lots of shopping")
 		.openPopup();
 					
