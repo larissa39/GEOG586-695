@@ -53,7 +53,7 @@
 	<p style="cplor:red;">In July of 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of fun things, and had a blast! Below, linked on the map, are some places we visited on the trip:</p>
 
 
-	<div id="mapid"></div>
+	<div id="mapid" class="center"></div>
 	
 	<script type= "application/javascript">
 		var mymap = L.map('mapid').setView([35.68452106000071, 139.75554726521702], 13);
