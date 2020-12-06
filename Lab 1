@@ -61,7 +61,7 @@
 
 		<div id="primaryMap"></div>
 		<script type="application/javascript">
-			var map = L.map('primaryMap').setView([49.23640, -122.94572], 13.5);
+			var map = L.map('primaryMap').setView([35.68468118004355, 139.75367006068146], 6);
 			
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -84,6 +84,9 @@
 				
 			L.marker([35.62465762208486, 139.42953915767993]).addTo(map)
 				.bindPopup("Sanrio Puroland - a Sanrio theme park. Everything is ~so kawaii~");
+			
+			L.marker([35.671440953956015, 139.704023548999]).addTo(map)
+				.bindPopup("Beard Papa Harajuku - a creme puff shop in Harajuku, good snack for after lots of shopping");
 					
 		</script>	
 		
