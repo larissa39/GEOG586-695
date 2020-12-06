@@ -60,29 +60,26 @@
 				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 			}).addTo(map);
 		
-			L.marker([49.226866, -122.942539]).addTo(map)
-				.bindPopup("This is the house that I spent most of my life in.");
+			L.marker([35.66036651018742, 139.69940115950655]).addTo(map)
+				.bindPopup("Genki Sushi - a cheap and good conveyor belt sushi resturant.");
 				
-			L.marker([49.231465, -122.946181]).addTo(map)
-				.bindPopup("This is where I lived before I moved when I was 6 years old. It happened to be just across the streat from my elementary school.");
+			L.marker([35.66121543467788, 139.69821374382948]).addTo(map)
+				.bindPopup("Adores Shibuya - video acrade with fun photobooths for pictures.");
 		
-			L.marker([49.230141, -122.944943]).addTo(map)
-				.bindPopup("This is Lakeview Elementary school, I did preschool here as well");
+			L.marker([35.66105455076822, 139.6973820170712]).addTo(map)
+				.bindPopup("Cat Cafe Mocha - cat cafe for furry snuggles.");
 				
-			L.marker([49.236151, -122.970885]).addTo(map)
-				.bindPopup("Deer Lake, a lake that no one swims in as it is totally filled with geese poop. I often went for runs around the lake during high school.");
+			L.marker([35.66239697807741, 139.86133579435545]).addTo(map)
+				.bindPopup("Hotel Lumiere - a cute hotel with three beds (which was hard to find!) for my mom, sister, and I.");
 				
-			L.marker([49.243213, -122.975331]).addTo(map)
-				.bindPopup("Burnaby Central Secondary School, my high school. It was also my home field for soccer, so I spent a lot of time here");
+			L.marker([35.66377824212148, 139.86149918469388]).addTo(map)
+				.bindPopup("Mos Burger - a tasty Japanese burger chain");
 				
-			L.marker([49.231317, -122.932556]).addTo(map)
-				.bindPopup("Robert Burnaby Park, has a baseball diamond, swiming pool, tennis courts, playground and off leash dog area. I swam here 3 or 4 times a week growing up.");
+			L.marker([35.62465762208486, 139.42953915767993]).addTo(map)
+				.bindPopup("Sanrio Puroland - a Sanrio theme park. Everything is ~so kawaii~");
 					
 		</script>	
 		
-	<script>
-		alert("Hello!");
-	</script>
 </body>
 
 </html>
