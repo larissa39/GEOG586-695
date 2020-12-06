@@ -3,6 +3,10 @@
 <head>
 	<style>
 		/* style settings */
+		#MyMap { height: 500px;
+				 width: 850px;
+		}
+		
 		h1 {
 			font-family: arial;
 			color: FireBrick;
@@ -50,8 +54,6 @@
 
 
 	<div id="mapid"></div>
-	
-	#mapid { height: 500px; }
 
 	var mymap = L.map('mapid').setView([35.68452106000071, 139.75554726521702], 13);
 			
