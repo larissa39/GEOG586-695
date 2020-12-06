@@ -47,12 +47,12 @@
 	<h1>My Birthday Trip 2018 - Tokyo with my Mom and Sister</h1>
 	<h2>GEOG 586/695 Lab 1</h2>
 	<h3>Larissa Shevchenko 10127268</h3>
-	<p style="cplor:red;">In July of 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of touristy things, and had a blast!</p>
+	<p style="cplor:red;">In July of 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of fun things, and had a blast! Below, linked on the map, are some places we visited on the trip:</p>
 
 
-	<div id="primaryMap"></div>
-	<script type="application/javascript">
-		var map = L.map('primaryMap').setView([35.68468118004355, 139.75367006068146], 6);
+	<div id="mapid"></div>
+	#mapid { height: 180px; }
+	var mymap = L.map('mapid').setView([35.68452106000071, 139.75554726521702], 13);
 			
 			L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 			    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -63,28 +63,28 @@
 			    accessToken: 'pk.eyJ1IjoibGFyaXNzYTM5IiwiYSI6ImNraTc3eWpkdjB0aGcyeHFvenEzaXF2emgifQ.-u3xK-pG04K-cocCaWxyEw'
 			 }).addTo(mymap);
 		
-			L.marker([35.66036651018742, 139.69940115950655]).addTo(map)
+			L.marker([35.66036651018742, 139.69940115950655]).addTo(mymap)
 				.bindPopup("Genki Sushi - a cheap and good conveyor belt sushi resturant.");
 				
-			L.marker([35.66121543467788, 139.69821374382948]).addTo(map)
+			L.marker([35.66121543467788, 139.69821374382948]).addTo(mymap)
 				.bindPopup("Adores Shibuya - video acrade with fun photobooths for pictures.");
 		
-			L.marker([35.66105455076822, 139.6973820170712]).addTo(map)
+			L.marker([35.66105455076822, 139.6973820170712]).addTo(mymap)
 				.bindPopup("Cat Cafe Mocha - cat cafe for furry snuggles.");
 				
-			L.marker([35.66239697807741, 139.86133579435545]).addTo(map)
+			L.marker([35.66239697807741, 139.86133579435545]).addTo(mymap)
 				.bindPopup("Hotel Lumiere - a cute hotel with three beds (which was hard to find!) for my mom, sister, and I.");
 				
-			L.marker([35.66377824212148, 139.86149918469388]).addTo(map)
+			L.marker([35.66377824212148, 139.86149918469388]).addTo(mymap)
 				.bindPopup("Mos Burger - a tasty Japanese burger chain");
 				
-			L.marker([35.62465762208486, 139.42953915767993]).addTo(map)
+			L.marker([35.62465762208486, 139.42953915767993]).addTo(mymap)
 				.bindPopup("Sanrio Puroland - a Sanrio theme park. Everything is ~so kawaii~");
 			
-			L.marker([35.671440953956015, 139.704023548999]).addTo(map)
+			L.marker([35.671440953956015, 139.704023548999]).addTo(mymap)
 				.bindPopup("Beard Papa Harajuku - a creme puff shop in Harajuku, good snack for after lots of shopping");
 					
-		</script>	
+	</script>	
 		
 </body>
 
