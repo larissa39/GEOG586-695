@@ -1,9 +1,10 @@
 <html>
 
 <head>
+
 	<style>
 	
-		#MyMap { height: 500px;
+		#mapid { height: 500px;
 				 width: 850px;
 		}
 		
@@ -37,11 +38,11 @@
 	</style>
 	
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-		crossorigin=""/>
+   	  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+	  crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-		crossorigin=""></script>
+	  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+	  crossorigin=""></script>
 		
 	<script>
 		alert("Welcome to Larissa's Webmap. Press OK to enter!")
@@ -49,12 +50,12 @@
 
 </head>
 
-	<body>
+<body>
 
-		<h1>My Birthday Trip 2018 - Tokyo with my Mom and Sister</h1>
-		<h2>GEOG 586/695 Lab 1</h2>
-		<h3>Larissa Shevchenko 10127268</h3>
-		<p style="cplor:red;">In July of 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of fun things, and had a blast! Below, linked on the map, are some places we visited on the trip:</p>
+	<h1>My Birthday Trip 2018 - Tokyo with my Mom and Sister</h1>
+	<h2>GEOG 586/695 Lab 1</h2>
+	<h3>Larissa Shevchenko 10127268</h3>
+	<p style="cplor:red;">In July of 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of fun things, and overall had a blast! Below, linked on the map, are some places we visited on the trip:</p>
 
 
 	<div id="mapid" class="center"></div>
@@ -85,6 +86,6 @@
 					
 	</script>	
 		
-	</body>
+</body>
 
 </html>
