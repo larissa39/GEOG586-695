@@ -11,7 +11,7 @@ var locations = {
                     "type":"Point",
                     "coordinates":[35.66036651018742, 139.69940115950655]}},
             
-            {"type": "Feature",
+            {"type":"Feature",
             "properties": {
                 "name": "Adores Shibuya",
                 "popupContent":"<b>Adores Shibuya</b><br> - video acrade with fun photobooths for pictures",
@@ -20,7 +20,7 @@ var locations = {
                     "type": "Point",
                     "coordinates": [35.66121543467788, 139.69821374382948]}},
 					
-            {"type": "Feature",
+            {"type":"Feature",
             "properties": {
                 "name": "Cat Cafe Mocha",
                 "popupContent":"<b>Cat Cafe Mocha</b><br> - cat cafe for furry snuggles",
@@ -48,7 +48,7 @@ var locations = {
                     "coordinates": [35.66377824212148, 139.86149918469388]}},
           
 
-            {"type": "Feature",
+            {"type":"Feature",
             "properties": {
                 "name": "Sanrio Puroland",
                 "popupContent":"<b>Sanrio Puroland</b><br> - a Sanrio theme park. Everything is ~so kawaii~",
@@ -58,17 +58,17 @@ var locations = {
                     "coordinates": [35.62465762208486, 139.42953915767993]}},
 		    
             
-            {"type": "Feature",
+            {"type":"Feature",
             "properties": {
                 "name": "Beard Papa Harajuku",
                 "popupContent":"<b>Beard Papa Harajuku</b><br> - a creme puff shop in Harajuku, good snack for after lots of shopping",
-				"img": "<img src= https://eatoeb.com/wp-content/uploads/2018/10/Menu-Page-Header-e1574096414372.jpg>"},
+				"img": "<img src= 7583948400_IMG_1248.jpg>"},
                 "geometry": {
                     "type": "Point",
                     "coordinates": [35.671440953956015, 139.704023548999]}}, 
 				
 			
-            {"type": "Feature",
+            {"type":"Feature",
             "properties": {
                 "name": "Tokyo Skytree",
                 "popupContent": "<b>Tokyo Skytree</b><br> - a radio broadcast tower with a shopping mall underneath",
@@ -78,12 +78,52 @@ var locations = {
                     "coordinates": [35.709990035416496, 139.81073641017545]}}]}
 				
 			
-            {"type": "Feature",
+            {"type":"Feature",
             "properties": {
                 "name": "Senso Temple",
-                "popupContent": "<b>Senso Temple</b><br> a very aesthetically pleasing and serene Buddhist temple",
+                "popupContent": "<b>Senso Temple</b><br> - a very aesthetically pleasing and serene Buddhist temple",
 				"img": "<img src= 68E0EA3D-7D30-42F4-8E55-3C5E462350F8.jpg>"},
                 "geometry": {
                     "type": "Point",
                     "coordinates": [35.714758562738545, 139.796806493158]}}]};
+
+			
+            {"type":"Feature",
+            "properties": {
+                "name": "Ginza Six",
+                "popupContent": "<b>Ginza Six</b><br> - a high-end shopping mall with a delicious world-famous green tea ice cream stall and nice rooftop garden to stare at the city lights from",
+				"img": "<img src= IMG_4432.jpg"},
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [35.669586360396146, 139.76401155307568]}}]}
+				
+			
+            {"type":"Feature",
+            "properties": {
+                "name": "Narita Airport",
+                "popupContent": "<b>Narita Airport</b><br> - the airport we flew in and out of",
+				"img": "<img src= IMG_3676.jpg>"},
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [35.77357778215192, 140.38743840470647]}}]};
+
+			
+            {"type":"Feature",
+            "properties": {
+                "name": "Men Mitsui",
+                "popupContent": "<b>Men Mitsui</b><br> - an inconspicuous yet really good bib gourmand ramen place",
+				"img": "<img src= 7583920800_IMG_1502.jpg"},
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [35.71254424544651, 139.7905458223567]}}]}
+				
+			
+            {"type":"Feature",
+            "properties": {
+                "name": "Cup Noodles Museum",
+                "popupContent": "<b>Cup Noodles Museum</b><br> - a museum honoring the history of the original Cup Noodles",
+				"img": "<img src= IMG_4293.jpg>"},
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [35.45540830552133, 139.63891585734598]}}]};
             
