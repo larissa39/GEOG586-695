@@ -99,7 +99,7 @@ var locationsInTokyo = {
 		"properties": {
 			"name": "Men Mitsui",
 			"popupContent": "<b>Men Mitsui</b><br> an inconspicuous yet really good bib gourmand ramen place",
-			"img": "<img src= 7583920800_IMG_1502.jpg>"}}},
+			"img": "<img src= 7583920800_IMG_1502.jpg>"}}]},
 
 var locationsNotInTokyo = {
 		"type" : "FeatureCollection",
@@ -130,6 +130,6 @@ var locationsNotInTokyo = {
 		"properties": {
 			"name": "Cup Noodles Museum",
 			"popupContent": "<b>Cup Noodles Museum</b><br> a museum honoring the history of the original Cup Noodles",
-			"img": "<img src= IMG_4293.jpg>"}}},
+			"img": "<img src= IMG_4293.jpg>"}}]},
 				
 				
