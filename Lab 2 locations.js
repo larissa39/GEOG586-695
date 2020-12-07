@@ -75,7 +75,7 @@ var locations = {
 				"img": "<img src= 7583920800_IMG_1523.jpg"},
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [35.709990035416496, 139.81073641017545]}}]}
+                    "coordinates": [35.709990035416496, 139.81073641017545]}},
 				
 			
             {"type":"Feature",
@@ -85,7 +85,7 @@ var locations = {
 				"img": "<img src= 68E0EA3D-7D30-42F4-8E55-3C5E462350F8.jpg>"},
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [35.714758562738545, 139.796806493158]}}]};
+                    "coordinates": [35.714758562738545, 139.796806493158]}},
 
 			
             {"type":"Feature",
@@ -95,7 +95,7 @@ var locations = {
 				"img": "<img src= IMG_4432.jpg"},
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [35.669586360396146, 139.76401155307568]}}]}
+                    "coordinates": [35.669586360396146, 139.76401155307568]}},
 				
 			
             {"type":"Feature",
@@ -105,7 +105,7 @@ var locations = {
 				"img": "<img src= IMG_3676.jpg>"},
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [35.77357778215192, 140.38743840470647]}}]};
+                    "coordinates": [35.77357778215192, 140.38743840470647]}},
 
 			
             {"type":"Feature",
@@ -115,7 +115,7 @@ var locations = {
 				"img": "<img src= 7583920800_IMG_1502.jpg"},
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [35.71254424544651, 139.7905458223567]}}]}
+                    "coordinates": [35.71254424544651, 139.7905458223567]}},
 				
 			
             {"type":"Feature",
