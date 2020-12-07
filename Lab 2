@@ -110,7 +110,7 @@
             fillOpacity: 0.5
             }; 
 	 	
-	L.geoJSON(locationsinTokyo, {
+	L.geoJSON(locationsInTokyo, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, locationsStyleInTokyo);
             }}).addTo(map);
