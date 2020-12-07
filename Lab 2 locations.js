@@ -1,33 +1,42 @@
 var locationsInTokyo = {
 		"type" : "FeatureCollection",
         "features" : [
-	
-            {"type":"Feature", 
-            "properties":{
-                "name":"Genki Sushi",
-                "popupContent":"<b>Genki Suski</b><br> a cheap and good conveyor belt sushi resturant",
-				"img": "<img src= IMG_4246.jpg>"},
-                "geometry":{
-                    "type":"Point",
-                    "coordinates":[35.66036651018742, 139.69940115950655]}},
-            
-            {"type":"Feature",
-            "properties": {
-                "name": "Adores Shibuya",
-                "popupContent":"<b>Adores Shibuya</b><br> video acrade with fun photobooths for pictures",
-				"img": "<img src= IMG_4602.jpg>"},
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [35.66121543467788, 139.69821374382948]}},
-					
-            {"type":"Feature",
-            "properties": {
-                "name": "Cat Cafe Mocha",
-                "popupContent":"<b>Cat Cafe Mocha</b><br> cat cafe for furry snuggles",
-				"img": "<img src= IMG_7625.jpg>"},
-                "geometry": {
-                    "type": "Point",
-		"coordinates": [35.66105455076822, 139.6973820170712]}};
+		
+		{"type":"Feature",
+		 "geometry":{
+			 "type":"Point",
+			 "coordinates":[35.66036651018742, 139.69940115950655]},
+		 "properties":{
+			 "name":"Genki Sushi",
+			 "popupContent":"<b>Genki Suski</b><br> a cheap and good conveyor belt sushi resturant",
+			 "img": "<img src= IMG_4246.jpg>"}};
+		
+		{"type":"Feature",
+		"geometry":{
+			"type":"Point",
+			"coordinates": [35.66121543467788, 139.69821374382948]},
+    		"properties": {
+			"name": "Adores Shibuya",
+			"popupContent":"<b>Adores Shibuya</b><br> video acrade with fun photobooths for pictures",
+			"img": "<img src= IMG_4602.jpg>"}};
+
+		{"type":"Feature",
+		"geometry":{
+			"type":"Point",
+			"coordinates": [35.66121543467788, 139.69821374382948]},
+		"properties": {
+			"name": "Adores Shibuya",
+			"popupContent":"<b>Adores Shibuya</b><br> video acrade with fun photobooths for pictures",
+			"img": "<img src= IMG_4602.jpg>"}};
+
+		{"type":"Feature",
+		"geometry": {
+			"type": "Point",
+			"coordinates": [35.66105455076822, 139.6973820170712]}};
+		"properties": {
+			"name": "Cat Cafe Mocha",
+			"popupContent":"<b>Cat Cafe Mocha</b><br> cat cafe for furry snuggles",
+			"img": "<img src= IMG_7625.jpg>"},
 
             {"type":"Feature", 
             "properties":{
