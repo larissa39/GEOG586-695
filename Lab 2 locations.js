@@ -72,7 +72,7 @@ var locations = {
             "properties": {
                 "name": "Tokyo Skytree",
                 "popupContent": "<b>Tokyo Skytree</b><br> - a radio broadcast tower with a shopping mall underneath",
-				"img": "<img src= 7583920800_IMG_1523.jpg"},
+				"img": "<img src= 7583920800_IMG_1523.jpg>"},
                 "geometry": {
                     "type": "Point",
                     "coordinates": [35.709990035416496, 139.81073641017545]}},
@@ -92,7 +92,7 @@ var locations = {
             "properties": {
                 "name": "Ginza Six",
                 "popupContent": "<b>Ginza Six</b><br> - a high-end shopping mall with a delicious world-famous green tea ice cream stall and nice rooftop garden to stare at the city lights from",
-				"img": "<img src= IMG_4432.jpg"},
+				"img": "<img src= IMG_4432.jpg>"},
                 "geometry": {
                     "type": "Point",
                     "coordinates": [35.669586360396146, 139.76401155307568]}},
@@ -112,7 +112,7 @@ var locations = {
             "properties": {
                 "name": "Men Mitsui",
                 "popupContent": "<b>Men Mitsui</b><br> - an inconspicuous yet really good bib gourmand ramen place",
-				"img": "<img src= 7583920800_IMG_1502.jpg"},
+				"img": "<img src= 7583920800_IMG_1502.jpg>"},
                 "geometry": {
                     "type": "Point",
                     "coordinates": [35.71254424544651, 139.7905458223567]}},
