@@ -34,8 +34,7 @@
 				 width: 900px;
                  border: 7px solid #003380;
             }
-            
-            
+                
 	</style>
 	
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -57,7 +56,7 @@
 
 	<h1>The State of Pennsylvania</h1>
     <h4>“Virtue, Liberty, and Independence.”</h4>
-    <br>
+    <center><img src="https://icons.iconarchive.com/icons/wikipedia/flags/128/US-PA-Pennsylvania-Flag-icon.png"></center>
 	<p>Explore the state of Pennsylvania using the map below. Click on each county, as well as the state's three largest cities to see further information about each!</p>
 
 <center><div id="mapid"></div></center>
