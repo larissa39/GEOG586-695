@@ -73,7 +73,7 @@
 <script type= "application/javascript">
 
 	function onEachFeature(feature, layer) {
-				layer.bindPopup(feature.properties.COUNTY_NAM+" COUNTY");
+				layer.bindPopup("<p>"+feature.properties.COUNTY_NAM+" COUNTY"+"</p>"+"<br>"+"The county is "+feature.properties.AREA_SQ_MI +" square miles large");
 				};
 
 	var xhr = new XMLHttpRequest();
