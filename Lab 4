@@ -3,44 +3,39 @@
 
 	<style>
 		
-		h1 {
-			font-family: garamond;
+		h1 {font-family: garamond;
 			color: #003380;
 			text-align: center;
 			}
 				
-		h2 {
-			font-family: arial;
+		h2 {font-family: arial;
 			color: #136aec;
 			text-align: center;
 			}
 				
-		h3 {
-			font-family: arial;
+		h3 {font-family: arial;
 			color: #66a3ff;
 			text-align: center;
 			}
 				
-		p {
-			font-family: arial;
+		h4 {font-family: cursive;
+			text-align: center;
+			}
+            
+       	p {font-family: arial;
+        	color: #136aec;
 			text-align: center;
 			}
 			
-		body {
-			background-color: FloralWhite;
+		body {background-color: #f0f0f4;
 			}
 		
 		#mapid { height: 600px;
 				 width: 900px;
-		}
-        
-         .center {
-         margin: auto;
-         width: 60%;
-         border: 5px solid; color: FireBrick;
-         padding: 10px;
-         }
-		
+                 border: 7px solid #003380;
+            }
+            
+            
 	</style>
 	
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -67,12 +62,10 @@
 
 <body>
 
-
-
-	<h1>Pennsylvania</h1>
-	<h2>GEOG 586/695 Lab 4</h2>
-	<h3>Larissa Shevchenko</h3>
-	<p>Explore the state of Pennsylvania using the map below:</p>
+	<h1>The State of Pennsylvania</h1>
+    <h4>“Virtue, Liberty, and Independence.”</h4>
+    <br>
+	<p>Explore the state of Pennsylvania using the map below. Click on each county to see the name!</p>
 
 <div id="mapid" class="pagecenter"></div>
 <div id="xhr_callup"></div>
@@ -117,6 +110,9 @@ var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mym
 		};
 		
 </script> 
+
+<h2>GEOG 586/695 Lab 4</h2>
+<h3>Larissa Shevchenko</h3>
 
 </body> 
 
