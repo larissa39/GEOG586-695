@@ -1,41 +1,52 @@
-<html> 
-<head> 
-
+<html>
+<head>
 	<style>
 		
-		h1 {font-family: Optima;
-			color: #003380;
+		h1 {
+			font-family: Garamond;
+			color: FireBrick;
+			text-align: center;
+			border:2px solid FireBrick;
+			}
+				
+		h2 {
+			font-family: georgia;
+			color: PaleVioletRed;
 			text-align: center;
 			}
 				
-		h2 {font-family: arial;
-			color: #136aec;
+		h3 {
+			font-family: arial;
+			color: MediumOrchid;
+			text-align: center;
+			}
+		
+		h4 {
+			font-family: arial;
+			color: MediumOrchid;
 			text-align: center;
 			}
 				
-		h3 {font-family: arial;
-			color: #66a3ff;
-			text-align: center;
-			}
-				
-		h4 {font-family: cursive;
-			text-align: center;
-			}
-            
-       	p {font-family: garamond;
-        	color: #136aec;
+		p {
+			font-family: garamond;
 			text-align: center;
 			}
 			
-		body {background-color: #f0f0f4;
+		body {
+			background-color: FloralWhite;
 			}
 		
 		#mapid { height: 600px;
 				 width: 900px;
-                 border: 7px solid #003380;
-            }
-            
-            
+		}
+        
+         .center {
+         margin: auto;
+         width: 60%;
+         border: 5px solid; color: FireBrick;
+         padding: 10px;
+         }
+		
 	</style>
 	
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -45,92 +56,66 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
-
-
+		
 	<script>
-		alert("Welcome to Pennsylvania. Press OK to explore!")
+		alert("Welcome to Larissa's Webmap. Press OK to enter!")
    	</script>
-
-	<style>
-		#mapid { height: 600px;
-				 width: 900px;
-		}
-						
-	</style>
-
-</head> 
-
+	
+<script src="locations.js"></script>
+<script>	
+        function Popups(feature, layer) {
+            if (feature.properties && feature.properties.popupContent && feature.properties.img) {
+				layer.bindPopup(feature.properties.popupContent+feature.properties.img);
+            };
+			};		
+</script>
+</head>
 <body>
-
-	<h1>The State of Pennsylvania</h1>
-    <h4>“Virtue, Liberty, and Independence.”</h4>
-    <br>
-	<p>Explore the state of Pennsylvania using the map below. Click on each county, and the state's three largest cities to see information about each!</p>
-    <br><p>sdasd
-
-<div id="mapid" class="pagecenter"></div>
-<div id="xhr_callup"></div>
-
+	<h1>Tokyo Trip with my Mom and Sister</h1>
+	<h2>GEOG 586/695 Lab 2</h2>
+	<h3>Larissa Shevchenko</h3>
+	<p>In July 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of fun things, and overall had a blast! Below, linked on the map, are some places we visited on the trip:</p>
+<div id="mapid" class="center"></div>
+	
 <script type= "application/javascript">
-
-
- function myFunction(newlayer){	
-	var mymap = L.map('mapid').setView([41.046341933094446, -76.65140889176775], 7);
-
-
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	var mymap = L.map('mapid').setView([35.48452106000071, 139.84813], 10);
+		
+	L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 	}).addTo(mymap);
-    
-    
-    L.marker([39.998089, -75.134109]).addTo(mymap)
-			.bindPopup("<p>"+"Phildelphia - Pennsylvania's 1st Largest City"+"</p>"+"<br>"+"pop. 1,591,800")
-			.openPopup();
-            
-    L.marker([40.44062, -79.99589]).addTo(mymap)
-			.bindPopup("<p>"+"Pittsburgh - Pennsylvania's 2nd Largest City"+"</p>"+"<br>"+"pop. 294,860")
-			.openPopup();
-            
-    L.marker([40.613953, -75.477791]).addTo(mymap)
-			.bindPopup("<p>"+"Allentown - Pennsylvania's 3rd Largest City"+"</p>"+"<br>"+"pop. 122,623")
-			.openPopup();
-    
-    
 			
-	L.marker([40.263680, -76.890739]).addTo(mymap)
-			.bindPopup("<h3>"+"Harrisburg - Capital of Pennsylvania"+"</h3>")
-			.openPopup();
-            
-        
+	L.geoJSON(locationsInTokyo, {
+		onEachFeature: Popups
+	}).addTo(mymap);
 	
-var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mymap);
-		};
-
-	function onEachFeature(feature, layer) {
-				layer.bindPopup("<p>"+feature.properties.COUNTY_NAM+" COUNTY"+"</p>"+"<br>"+"The county is "+feature.properties.AREA_SQ_MI +" square miles large!");
-				};
-
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-		//document.getElementById("xhr_request").innerHTML = this.responseText;
-    }
-};
+	L.geoJSON(locationsNotInTokyo, {
+		onEachFeature: Popups
+	}).addTo(mymap);
 	
-	xhr.open("GET", "https://burnsr77.github.io/GH_demo/PACo.geojson", "synch");
 	
-	xhr.send();
-	
-	//var APIresponse = xhr.responseText;
-	
-		
-</script> 
+	var locationsStyleInTokyo = {
+            radius: 10,
+            fillColor: "FloralWhite",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.5
+            }; 
+	 	
+	L.geoJSON(locationsInTokyo, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, locationsStyleInTokyo);
+            }}).addTo(map);
+            }}).addTo(mymap);
 
-<h2>GEOG 586/695 Lab 4</h2>
-<h3>Larissa Shevchenko</h3>
+	var locationsStyleNotInTokyo = {
+            radius: 10,
 
-</body> 
+	L.geoJSON(locationsNotInTokyo, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, locationsStyleNotInTokyo);
+            }}).addTo(map);
+            }}).addTo(mymap);
 
-</html>
+
+</script>
