@@ -65,8 +65,7 @@
 	<h1>The State of Pennsylvania</h1>
     <h4>“Virtue, Liberty, and Independence.”</h4>
     <br>
-	<p>Explore the state of Pennsylvania using the map below. Click on each county, and the state's three largest cities to see information about each!</p>
-    <br><p>sdasd
+	<p>Explore the state of Pennsylvania using the map below. Click on each county, as well as the state's three largest cities to see further information about each!</p>
 
 <div id="mapid" class="pagecenter"></div>
 <div id="xhr_callup"></div>
@@ -107,7 +106,7 @@ var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mym
 		};
 
 	function onEachFeature(feature, layer) {
-				layer.bindPopup("<p>"+feature.properties.COUNTY_NAM+" COUNTY"+"</p>"+"<br>"+"The county is "+feature.properties.AREA_SQ_MI +" square miles large!");
+				layer.bindPopup("<p>"+feature.properties.COUNTY_NAM+" COUNTY"+"</p>"+"<br>"+"This county is "+feature.properties.AREA_SQ_MI +" square miles large!");
 				};
 
 	var xhr = new XMLHttpRequest();
