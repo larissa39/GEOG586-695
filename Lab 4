@@ -11,13 +11,13 @@
 				
 		h2 {
 			font-family: arial;
-			color: #4d94ff;
+			color: #136aec;
 			text-align: center;
 			}
 				
 		h3 {
 			font-family: arial;
-			color: #0667f9;
+			color: #66a3ff;
 			text-align: center;
 			}
 				
@@ -100,7 +100,7 @@
 
 	
  function myFunction(newlayer){	
-	var mymap = L.map('primaryMap').setView([41.046341933094446, -76.08140889176775], 7);
+	var mymap = L.map('primaryMap').setView([41.046341933094446, -77.20140889176775], 7);
 
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -108,8 +108,8 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 			}).addTo(mymap);
     
 			
-	L.marker([40.26407025548734, -76.88342957308384]).addTo(mymap)
-			.bindPopup("Capital - Harrisburg")
+	L.marker([40.263680, -76.890739]).addTo(mymap)
+			.bindPopup("Harrisburg - Capital of Pennsylvania")
 			.openPopup();
 	
 var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mymap);
