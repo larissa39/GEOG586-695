@@ -93,13 +93,10 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
     L.marker([40.613953, -75.477791]).addTo(mymap)
 			.bindPopup("<p>"+"Allentown - Pennsylvania's 3rd Largest City"+"</p>"+"<br>"+"pop. 122,623")
 			.openPopup();
-    
-    
 			
 	L.marker([40.263680, -76.890739]).addTo(mymap)
 			.bindPopup("<h3>"+"Harrisburg - Capital of Pennsylvania"+"</h3>")
 			.openPopup();
-            
         
 	
 var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mymap);
@@ -114,15 +111,12 @@ var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mym
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
         myFunction(myArr);
-		//document.getElementById("xhr_request").innerHTML = this.responseText;
     }
 };
 	
 	xhr.open("GET", "https://burnsr77.github.io/GH_demo/PACo.geojson", "synch");
 	
 	xhr.send();
-	
-	//var APIresponse = xhr.responseText;
 	
 		
 </script> 
