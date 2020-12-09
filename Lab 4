@@ -1,0 +1,122 @@
+<html> 
+<head> 
+
+	<style>
+		
+		h1 {
+			font-family: garamond;
+			color: #003380;
+			text-align: center;
+			}
+				
+		h2 {
+			font-family: arial;
+			color: #4d94ff;
+			text-align: center;
+			}
+				
+		h3 {
+			font-family: arial;
+			color: #0667f9;
+			text-align: center;
+			}
+				
+		p {
+			font-family: arial;
+			text-align: center;
+			}
+			
+		body {
+			background-color: FloralWhite;
+			}
+		
+		#mapid { height: 600px;
+				 width: 900px;
+		}
+        
+         .center {
+         margin: auto;
+         width: 60%;
+         border: 5px solid; color: FireBrick;
+         padding: 10px;
+         }
+		
+	</style>
+	
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+
+	<script>
+		alert("Welcome to Pennsylvania. Press OK to explore!")
+   	</script>
+
+	<style>
+		#primaryMap {	height: 600px;
+						width: 800px;}
+						
+	</style>
+
+</head> 
+
+<body>
+
+
+
+	<h1>Pennsylvania</h1>
+	<h2>GEOG 586/695 Lab 4</h2>
+	<h3>Larissa Shevchenko</h3>
+	<p>Explore the state of Pennsylvania using the map below:</p>
+
+<div id="primaryMap" class="pagecenter"></div>
+<div id="xhr_callup"></div>
+
+<script type= "application/javascript">
+
+	function onEachFeature(feature, layer) {
+				layer.bindPopup(feature.properties.COUNTY_NAM+" COUNTY");
+				};
+
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+		//document.getElementById("xhr_request").innerHTML = this.responseText;
+    }
+};
+	
+	xhr.open("GET", "https://burnsr77.github.io/GH_demo/PACo.geojson", "synch");
+	
+	xhr.send();
+	
+	//var APIresponse = xhr.responseText;
+	
+
+	
+ function myFunction(newlayer){	
+	var mymap = L.map('primaryMap').setView([41.046341933094446, -76.08140889176775], 7);
+
+
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+			}).addTo(mymap);
+    
+			
+	L.marker([40.26407025548734, -76.88342957308384]).addTo(mymap)
+			.bindPopup("Capital - Harrisburg")
+			.openPopup();
+	
+var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mymap);
+		};
+		
+</script> 
+
+</body> 
+
+</html>
