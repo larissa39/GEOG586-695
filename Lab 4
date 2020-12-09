@@ -51,13 +51,6 @@
 		alert("Welcome to Pennsylvania. Press OK to explore!")
    	</script>
 
-	<style>
-		#mapid { height: 600px;
-				 width: 900px;
-		}
-						
-	</style>
-
 </head> 
 
 <body>
@@ -67,14 +60,14 @@
     <br>
 	<p>Explore the state of Pennsylvania using the map below. Click on each county, as well as the state's three largest cities to see further information about each!</p>
 
-<div id="mapid" class="pagecenter"></div>
+<center><div id="mapid"></div></center>
 <div id="xhr_callup"></div>
 
 <script type= "application/javascript">
 
 
  function myFunction(newlayer){	
-	var mymap = L.map('mapid').setView([41.046341933094446, -76.65140889176775], 7);
+	var mymap = L.map('mapid').setView([41.046341933094446, -77.65140889176775], 7);
 
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
