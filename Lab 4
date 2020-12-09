@@ -3,7 +3,7 @@
 
 	<style>
 		
-		h1 {font-family: garamond;
+		h1 {font-family: Optima;
 			color: #003380;
 			text-align: center;
 			}
@@ -22,7 +22,7 @@
 			text-align: center;
 			}
             
-       	p {font-family: arial;
+       	p {font-family: garamond;
         	color: #136aec;
 			text-align: center;
 			}
