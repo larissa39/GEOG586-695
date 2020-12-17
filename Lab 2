@@ -1,5 +1,7 @@
 <html>
+
 <head>
+
 	<style>
 		
 		h1 {
@@ -62,6 +64,7 @@
    	</script>
 	
 <script src="locations.js"></script>
+
 <script>	
         function Popups(feature, layer) {
             if (feature.properties && feature.properties.popupContent && feature.properties.img) {
@@ -69,30 +72,35 @@
             };
 			};		
 </script>
+
 </head>
+
 <body>
+
 	<h1>Tokyo Trip with my Mom and Sister</h1>
 	<h2>GEOG 586/695 Lab 2</h2>
 	<h3>Larissa Shevchenko</h3>
 	<p>In July 2018, my mom, sister, and I went to Japan for a week to celebrate my birthday. Poor dad had to stay home. Whomp whomp. We ate lots of good food, did lots of fun things, and overall had a blast! Below, linked on the map, are some places we visited on the trip:</p>
+
+
 <div id="mapid" class="center"></div>
 	
 <script type= "application/javascript">
-	var mymap = L.map('mapid').setView([35.48452106000071, 139.84813], 10);
+	var mymap = L.map('mapid').setView([35.48452106000071, -220.187], 10);
 		
 	L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 	}).addTo(mymap);
-			
-	L.geoJSON(locationsInTokyo, {
+        
+    L.geoJSON(locationsInTokyo, {
 		onEachFeature: Popups
 	}).addTo(mymap);
 	
-	L.geoJSON(locationsNotInTokyo, {
-		onEachFeature: Popups
-	}).addTo(mymap);
-	
-	
+	L.geoJSON(locationsNotInTokyo, { 
+		onEachFeature:Popups
+	}).addTo(mymap); 
+        
+        
 	var locationsStyleInTokyo = {
             radius: 10,
             fillColor: "FloralWhite",
@@ -105,17 +113,29 @@
 	L.geoJSON(locationsInTokyo, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, locationsStyleInTokyo);
-            }}).addTo(map);
             }}).addTo(mymap);
-
+	    
 	var locationsStyleNotInTokyo = {
             radius: 10,
-
+            fillColor: "FireBrick",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.5
+            };
+	    
 	L.geoJSON(locationsNotInTokyo, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, locationsStyleNotInTokyo);
-            }}).addTo(map);
             }}).addTo(mymap);
+	    
+					
+</script>	
+	
+<h3>Additional Information:</h3>
+<p>The circles in white represent points of interest <b>in</b> the Tokyo city area.</p>
+<p>The circles in red represent points of interest <b>not in</b> the Tokyo city area.</p>
 
+</body>
 
-</script>
+</html>
