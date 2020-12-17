@@ -1,3 +1,4 @@
+        
      var locationsInTokyo = {
 		"type" : "FeatureCollection",
         "features" : [
