@@ -98,17 +98,17 @@ var geoJSONlayer = L.geoJSON(newlayer, {onEachFeature: onEachFeature}).addTo(mym
 				layer.bindPopup("<p>"+feature.properties.COUNTY_NAM+" COUNTY"+"</p>"+"<br>"+"This county is "+feature.properties.AREA_SQ_MI +" square miles large!");
 				};
 
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
+	var httpReq = new XMLHttpRequest();
+	httpReq.onreadystatechange = function() {
+    if (this.readyState == 4) {
+        var respText = JSON.parse(this.responseText);
+        myFunction(respText);
     }
 };
 	
-	xhr.open("GET", "https://burnsr77.github.io/GH_demo/PACo.geojson", "synch");
+	httpReq.open("GET", "https://burnsr77.github.io/GH_demo/PACo.geojson", "synch");
 	
-	xhr.send();
+	httpReq.send();
 	
 		
 </script> 
