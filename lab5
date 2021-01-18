@@ -1,0 +1,201 @@
+<html> 
+<head> 
+
+	<style>
+		
+		h1 {font-family: Optima;
+			color: #660066;
+			text-align: center;
+			}
+				
+		h3 {font-family: monaco;
+			color: #660066;
+			text-align: center;
+			}
+				
+		h4 {font-family: monaco;
+			color: #333333;
+			text-align: center;
+			}
+            
+       	p {font-family: arial;
+        	color: #333333;
+			text-align: center;
+			}
+			
+		body {background-image: url("https://javascript30.com/images/topographic-pattern.png");
+			}
+            
+		#mapid { height: 600px;
+				 width: 600px;
+                 border: 6px solid #660066;
+            }
+                
+	</style>
+	
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  
+<script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
+  
+<script src="education.geojson"></script>
+
+</head>
+
+<body>
+
+
+	<h1>Number of Individuals with a Post-Secondary Certificate, Diploma, or Degree in Alberta</h1>
+	<p>Explore the province of Alberta below by hovering over each of the census subdivsions to the number of individuals within that census tract who obtain a post-secondary certificate, diploma, or degree, as of 2016. The layer toggles are located in the upper right corner of the map.
+<br>
+<br>
+The data is obtained from the Alberta Open Data portal, <a href="https://open.alberta.ca/opendata/social-vulnerability-indicators-by-census-subdivision-2016-census-of-canada">located here</a></p>
+
+
+<center><div id="mapid"></div></center>
+	
+<script type= "application/javascript">
+	var mymap = L.map('mapid').setView([55.00, -114.00], 4.5);
+		
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+	}).addTo(mymap); 
+
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'education.geojson');
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.responseType = 'json';
+xhr.onload = function() {
+    if (xhr.status !== 200) return
+    L.geoJSON(xhr.response).addTo(mymap);
+};
+xhr.send();
+
+function onEachFeature(feature, layer) {
+		layer.on({
+			mouseover: highlightFeature,
+			mouseout: resetHighlight,
+			click: zoomToFeature
+		});
+	}
+
+function getColor(d) {
+    return d > 600000 ? '#7a0177' :
+           d > 36870  ? '#c51b8a' :
+           d > 14955  ? '#f768a1' :
+           d > 5370  ? '#fa9fb5' :
+           d > 1490   ? '#fcc5c0' :
+                      '#feebe2';
+}
+
+function style(feature) {
+
+    return {
+        fillColor: getColor(TOTAL_1701),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
+
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#000000',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+}
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+}
+
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
+
+var grayscale = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+	maxZoom: 16
+	});
+    
+var educationTracts = L.geoJSON(education, {
+		style: style,
+		onEachFeature: onEachFeature
+	});
+    
+var map = L.map('mymap', {
+    center: [55.00, -114.00],
+    zoom: 4.5,
+    layers: [grayscale, educationTracts]
+});
+
+var baseMaps = {
+    "Educated Individuals": educationTracts,
+};
+
+var overlayMaps = {
+    "Cities": cities
+};
+
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this.update();
+    return this._div;
+};
+
+
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Number of individuals:</h4>' +  (props ?
+        '<b>' + feature.properties.CSDNAME + '</b><br />' + feature.properties.TOTAL_1701 + ' people holding this distinction'
+        : 'Hover over a census tract');
+};
+
+info.addTo(map);
+
+var legend = L.control({position: 'bottomright'});
+
+	legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = [0, 1490, 5370, 14955, 36870, 600000],
+        labels = [];
+
+    for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(map);
+
+					
+</script>	
+	
+<h3>GEOG 586/695 Lab 5</h3>
+<h4>Larissa Shevchenko</h4>
+
+</body>
+</html>
